@@ -5,7 +5,7 @@ History
 V8 Engine - Chrome
 			Compile JS Code
 
-MS Edge - Chkra
+MS Edge - Chakra
 Firefox - SpiderMonkey
 
 
