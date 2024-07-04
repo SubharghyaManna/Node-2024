@@ -1,0 +1,106 @@
+Some useful modules: readline, path, os, fs, http, url
+
+readline
+--------
+
+const readline = require('readline');
+
+const rl = readline.createInterface({
+    input: process.stdin, // stdin
+    output: process.stdout
+})
+
+let name;
+
+rl.question('Please enter your name: ', (answer) => {
+    name = answer;
+    rl.close();
+});
+
+console.log("Hello " + name);
+
+
+path
+----
+
+parse()
+join()
+
+
+{
+  root: 'D:\\',
+  dir: 'D:\\Document\\Computer\\My Class Materials\\Node@2024\\Node-Workspace\\Useful Modules',
+  base: 'PathDemo.js',
+  ext: '.js',
+  name: 'PathDemo'
+}
+
+
+const path = require('path');
+
+console.log(path.join(__dirname, 'ReadlineDemo.js'));
+
+
+os
+--
+
+Fetch OS info:       arch(), platform(), release()
+System uptime:       uptime()
+User Info:           userInfo()
+Network Interface:   networkInterface()
+Memory Info:         totalmem(), freemem()
+
+
+fs
+--
+
+- handle the flat file. that contains rich text. [those you can open in notepad]
+
+readFile() -> async
+readFileSync() -> reading operation sync
+
+writeFile()
+writeFileSync()
+
+appendFile()
+appendFileSync()
+
+open()
+openSync()
+
+close()
+closeSync()
+
+unlink(): delete the file
+
+truncate(): clear the file
+truncateSync():
+
+
+Mode:
+
+Append:
+
+a: append. But it creates the file if it doesn't exist.
+ax: append. But it fails if it doesn't exist.
+a+: reading & appending. But it creates the file if it doesn't exist.
+ax+: reading & appending. But it fails if it doesn't exist.
+as: 
+as+: 
+
+Read:
+
+r
+rs
+r+: read, write
+rs+
+
+If file is not present, Exception.
+
+Write:
+
+w
+wx
+w+: write, read
+wx+
+
